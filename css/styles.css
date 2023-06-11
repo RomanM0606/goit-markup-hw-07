@@ -297,7 +297,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #F4F4FD;
-  max-width: 268px;
+  max-width: 264px;
 }
 
 .social-links-footer {
@@ -641,6 +641,27 @@ img {
   background-color: var(--accent-color);
 }
 
+/*================= portfolio ============*/
+
+.filter-button {
+  padding: 12px 24px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #4D5AE5;
+  background-color: #F4F4FD;
+  border: 1px solid #E7E9FC;
+  border-radius: 4px;  
+}
+
+
+
 
 
 /*================== mobile ==================*/
@@ -711,6 +732,10 @@ img {
     color: #404BBF;
   }
 
+  .mobile-menu-link-portfolio {
+    color: #404BBF;
+  }
+
 
   .mobile-contacts-menu-list {
     display: flex;
@@ -759,7 +784,7 @@ img {
 
 
   .mobile-social-list {
-    width: 100%;
+    max-width: 328px;
     display: flex;
     justify-content: space-between;
   }
@@ -768,7 +793,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     background: #2e2f42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url('/images/people-office-mobile.jpg');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url('../images/people-office-mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%; 
@@ -779,7 +804,7 @@ img {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     .hero-section {
-      background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),url('/images/people-office-mobile@2x.jpg')
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),url('../images/people-office-mobile@2x.jpg')
     }
   }
 
@@ -890,10 +915,18 @@ img {
   .modal {
     width: 392px;
   }
+
+  /*================= portfolio ===============*/
+  
+  .filter-button-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
 }
-
-
-
 /*==================== tablet ====================*/
 
 @media screen and (min-width: 768px) {
@@ -974,7 +1007,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     background: #2e2f42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url('/images/people-office-tablet.jpg');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url('../images/people-office-tablet.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%; 
@@ -985,7 +1018,7 @@ img {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     .hero-section {
-      background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),url('/images/people-office-tablet@2x.jpg')
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),url('../images/people-office-tablet@2x.jpg')
     }
   }
   
@@ -1163,7 +1196,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     background: #2e2f42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url('..//images/people-office.jpg');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url('../images/people-office.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 1440px;
@@ -1175,7 +1208,7 @@ img {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     .hero-section {
-      background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),url('/images/people-office@2x.jpg')
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),url('../images/people-office@2x.jpg')
     }
   }
 
@@ -1192,6 +1225,10 @@ img {
 
   .info-section {
     padding: 120px 0;
+  }
+
+  .info-section-container {
+    margin: 0;
   }
 
   .info-section-item-list {
@@ -1320,13 +1357,18 @@ img {
   }
 
   .footer-container {
-    max-width: 1160px;
+    max-width: 1158px;
     flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .footer-text {
+    min-width: 264px;
   }
 
   .footer-logo-text {
+    margin-right: 100px;
     margin-bottom: 0;
-    margin-right: 120px;
   }
 
   .social-links-footer {
